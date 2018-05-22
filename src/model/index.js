@@ -14,6 +14,7 @@ export default () => {
 const format = () => {
     let flirt = upperCaseFirst(genGreeting());
     let compliment = genCompliment();
+    let question = genQuestion();
 
     if (Math.random() > 0.5) {
         flirt += ', ';
@@ -26,6 +27,7 @@ const format = () => {
 
     flirt += compliment;
     flirt += endSentence(0.5);
+    flirt += upperCaseFirst(question);
 
     return flirt;
 }
@@ -57,6 +59,12 @@ const genCompliment = () => {
     }
 
     return compliment;
+}
+
+const genQuestion = () => {
+    let question = word(types.REQUESTS) + ' ' + word(types.VERBS) + ' ' + word(types.TEMPORALS) + '?';
+
+    return question;
 }
 
 const endSentence = (dotProbability) => {
