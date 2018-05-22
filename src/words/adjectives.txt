@@ -8,3 +8,5 @@ glorious
 remarkable
 astonishing
 dreamlike
+blue
+warm
