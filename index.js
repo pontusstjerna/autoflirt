@@ -4,10 +4,8 @@ export default () => {
     return generate();
 }
 
-setInterval(() => {
-    generate().then(line => {    
-        console.log(line);
-    });    
+setInterval(() => { 
+    console.log(generate());   
 }, 5000);
 
 // generate().then(line => {    

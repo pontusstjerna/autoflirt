@@ -5,13 +5,8 @@ import { upperCaseFirst } from '../util/stringUtils';
 
 let adjectives = [];
 
+// generate
 export default () => {
-    return setup().then(() => {
-        return format();
-    });
-}
-
-const format = () => {
     let flirt = upperCaseFirst(genGreeting());
     let compliment = genCompliment();
     let question = genQuestion();
