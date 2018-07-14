@@ -10,6 +10,6 @@ module.exports = function () {
     return (0, _model2.default)();
 };
 
-setInterval(function () {
-    console.log((0, _model2.default)());
-}, 5000);
+// setInterval(() => { 
+//     console.log(generate());   
+// }, 5000);
