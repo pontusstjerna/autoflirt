@@ -1,6 +1,6 @@
 import generate from './model';
 
-export default () => {
+module.exports = function() {
     return generate();
 }
 
