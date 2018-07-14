@@ -4,6 +4,6 @@ module.exports = function() {
     return generate();
 }
 
-setInterval(() => { 
-    console.log(generate());   
-}, 5000);
+// setInterval(() => { 
+//     console.log(generate());   
+// }, 5000);
