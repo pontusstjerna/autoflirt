@@ -16,7 +16,7 @@ export default (type, isSerious, isMean, tOrN) => {
     return formatTorN(words[getRandomInt(words.length - 1)], tOrN);
 }
 
-const formatTorN = (string, tOrN) => {
+export const formatTorN = (string, tOrN) => {
     string = string.replace(/%tn%/g, tOrN);
 
     if (tOrN === 't') {
