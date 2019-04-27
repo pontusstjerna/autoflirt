@@ -5,13 +5,13 @@ export const generateEN = () => {
     return _generateEN();
 }
 
-export const generateSE = () => {
-    return _generateSE();
+export const generateSE = (isSerious, isMean) => {
+    return _generateSE(isSerious, isMean);
 }
 
 setInterval(() => { 
-    console.log(generateSE());   
-}, 5000);
+    console.log(generateSE(false, true));   
+}, 2000);
 
 // generate().then(line => {    
 //     console.log('*********PICK UP LINE************\n');

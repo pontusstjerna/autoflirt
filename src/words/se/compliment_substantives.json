@@ -1,0 +1,40 @@
+{
+    "serious": [
+        "<ett>skratt",
+        "<ett>glas",
+        "<en>tröja",
+        "<en>hand",
+        "<en>plånbok",
+        "<en>hund",
+        "<en>telefon",
+        "<en>utstrålning",
+        "<en>glädje",
+        "<en>rumpa",
+        "<en>mage",
+        "<ett>dansmove",
+        "<en>lägenhet",
+        "<ett>hus",
+        "<en>bicep",
+        "<ett>utseende",
+        "<en>ride",
+        "<en>röst",
+        "<en>stämma"
+    ],
+    "mean": [
+        "<en>sopa",
+        "<en>smutsig tröja"
+    ],
+    "weird": [
+        "<en>tårta",
+        "<en>buske",
+        "<en>katt",
+        "<en>lårbenshals",
+        "<ett>öga",
+        "<en>dator",
+        "<en>mås",
+        "<en>trana",
+        "<en>ko",
+        "<ett>kaffefilter",
+        "<en>raggningsreplik"
+    ]
+}
