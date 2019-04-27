@@ -1,11 +1,16 @@
-import generate from './model';
+import _generateEN from './model_en';
+import _generateSE from './model_se';
 
-export default () => {
-    return generate();
+export const generateEN = () => {
+    return _generateEN();
+}
+
+export const generateSE = () => {
+    return _generateSE();
 }
 
 setInterval(() => { 
-    console.log(generate());   
+    console.log(generateSE());   
 }, 5000);
 
 // generate().then(line => {    
