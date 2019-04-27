@@ -9,9 +9,9 @@ export const generateSE = (isSerious, isMean) => {
     return _generateSE(isSerious, isMean);
 }
 
-setInterval(() => { 
+/*setInterval(() => { 
     console.log(generateSE(false, true));   
-}, 2000);
+}, 2000);*/
 
 // generate().then(line => {    
 //     console.log('*********PICK UP LINE************\n');

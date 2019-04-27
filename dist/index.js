@@ -23,9 +23,9 @@ var generateSE = exports.generateSE = function generateSE(isSerious, isMean) {
     return (0, _model_se2.default)(isSerious, isMean);
 };
 
-setInterval(function () {
-    console.log(generateSE(false, true));
-}, 2000);
+/*setInterval(() => { 
+    console.log(generateSE(false, true));   
+}, 2000);*/
 
 // generate().then(line => {    
 //     console.log('*********PICK UP LINE************\n');
