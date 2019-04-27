@@ -1,9 +1,20 @@
-import generate from './model';
+import _generateEN from './model_en';
+import _generateSE from './model_se';
 
-module.exports = function() {
-    return generate();
+export const generateEN = () => {
+    return _generateEN();
 }
 
-// setInterval(() => { 
-//     console.log(generate());   
-// }, 5000);
+export const generateSE = () => {
+    return _generateSE();
+}
+
+setInterval(() => { 
+    console.log(generateSE());   
+}, 5000);
+
+// generate().then(line => {    
+//     console.log('*********PICK UP LINE************\n');
+//     console.log(line);
+//     console.log('\n*********************************');
+// });

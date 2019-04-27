@@ -1,17 +1,16 @@
-import * as words from '../words/se';
-import test from '../words/se/greetings.json';
+import * as dict from '../words/se';
 
 import { getRandomInt, getRandomBoolean } from '../util';
 
 export default (type, isSerious, isMean) => {
-    let words = test.serious;
+    let words = dict[type].serious;
 
     if (!isSerious) {
-        words.concat(test.weird);
+        words.concat(dict[type].weird);
     }
 
     if (isMean) {
-        words.concat(test.mean);
+        words.concat(dict[type].mean);
     }
 
     return words[getRandomInt(words.length - 1)];
