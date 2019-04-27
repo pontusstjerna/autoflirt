@@ -22,7 +22,7 @@ export default (serious, mean) => {
         `${upperCaseFirst(word(types.GREETINGS, serious, mean))} ${word(types.COMPLIMENTS, serious, mean)}${commaDotOrExclamationMark}` + 
         ` ${commaDotOrExclamationMark === ',' ? relativePronoun : upperCaseFirst(relativePronoun)} ${adjective}` + 
         ` ${substantive} du har${getRandomBoolean() ? ' där' : ''}. ${upperCaseFirst(word(types.DO_YOU_MIND, serious, mean))}` +
-        ` ${mineOrI(word(types.COMPLIMENT_SUBSTANTIVES, serious, mean))}`;
+        ` ${mineOrI(word(types.COMPLIMENT_SUBSTANTIVES, serious, mean))} ${word(types.VERBS, serious, mean)}`;
 
     return flirt;
 }
