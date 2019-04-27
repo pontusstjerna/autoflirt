@@ -8,3 +8,4 @@ export const TEMPORALS = 'temporals';
 export const VERBS = 'verbs';
 export const RELATIVE_PRONOUNS = 'relative_pronouns';
 export const DO_YOU_MIND = 'doYouMind';
+export const PREPOSITIONS = 'prepositions';

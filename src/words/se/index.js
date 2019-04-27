@@ -6,6 +6,7 @@ import _complimentSubstantives from './compliment_substantives.json';
 import _doYouMind from './do_you_mind.json';
 import _substantives from './substantives.json';
 import _verbs from './verbs.json';
+import _prepositions from './prepositions.json';
 
 export const greetings = _greetings;
 export const compliments = _compliments;
@@ -15,3 +16,4 @@ export const complimentSubstantives = _complimentSubstantives;
 export const doYouMind = _doYouMind;
 export const substantives = _substantives;
 export const verbs = _verbs;
+export const prepositions = _prepositions;

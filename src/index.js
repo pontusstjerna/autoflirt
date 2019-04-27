@@ -11,7 +11,7 @@ export const generateSE = (isSerious, isMean) => {
 
 setInterval(() => { 
     console.log(generateSE(false, true));   
-}, 2000);
+}, 20);
 
 // generate().then(line => {    
 //     console.log('*********PICK UP LINE************\n');
