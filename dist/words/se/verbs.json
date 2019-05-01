@@ -3,7 +3,11 @@
         "ligger",
         "ligger med dig",
         "skriver ner",
+<<<<<<< HEAD
         "sparar ditt nummer",
+=======
+        "sparar",
+>>>>>>> 5da05b58c6d5d6bf6b4a54f1720247f3c49a0176
         "dansar",
         "antecknar",
         "smickrar",
@@ -12,9 +16,16 @@
         "umgås",
         "SMSar",
         "lägger till dig på Facebook",
+<<<<<<< HEAD
         "laddar min telefon",
         "smygtittar",
         "träffar dig"
+=======
+        "lägger till dig på Snap",
+        "laddar min telefon",
+        "smygtittar",
+        "träffar varandra"
+>>>>>>> 5da05b58c6d5d6bf6b4a54f1720247f3c49a0176
     ],
     "mean": [
         "sprängs",
@@ -29,11 +40,15 @@
         "äter ett frö",
         "landar med min nya flygapparat",
         "tittar på trandansen live",
+<<<<<<< HEAD
         "fladdrar",
         "nosar litegranna",
         "viskar",
         "berättar en saga om flugan som aldrig kom hem",
         "kastar sten",
         "hoppar runt i en ring"
+=======
+        "fladdrar"
+>>>>>>> 5da05b58c6d5d6bf6b4a54f1720247f3c49a0176
     ]
 }
