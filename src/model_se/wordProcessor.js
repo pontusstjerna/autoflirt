@@ -1,20 +1,8 @@
-import * as dict from '../words/se';
+import { getWord } from '../words';
 
-import { getRandomInt, getRandomBoolean } from '../util';
-
-export default (type, isSerious, isMean, tOrN) => {
-    let words = dict[type].serious;
-
-    if (!isSerious) {
-        words = words.concat(dict[type].weird);
-    }
-
-    if (isMean) {
-        words = words.concat(dict[type].mean);
-    }
-
-    return formatTorN(words[getRandomInt(words.length - 1)], tOrN);
-}
+export default (type, isSerious, isMean, tOrN) =>
+    getWord({ type, serious: isSerious, mean: isMean })
+        .then(word => formatTorN(word.value ? word.value : ''), tOrN);
 
 export const formatTorN = (string, tOrN) => {
     string = string.replace(/%tn%/g, tOrN);
@@ -24,4 +12,4 @@ export const formatTorN = (string, tOrN) => {
     } else {
         return string.replace(/%t%/g, '').replace(/%tt%/g, '').replace(/%ttn%/g, 'n');
     }
-}
+};

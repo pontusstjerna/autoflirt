@@ -3,6 +3,9 @@ import generateEN from './model_en';
 import generateSE from './model_se';
 import * as allWordsSE from './words/se';
 import { connectDb } from './words';
+import { config } from 'dotenv';
+
+config();
 
 const wordsSE = () => {
     return Object.keys(allWordsSE)
@@ -20,7 +23,7 @@ app.get('/se/', (req, res) => {
     requestsSE++;
     let serious = req.query.serious !== "false";
     let mean = req.query.mean === "true";
-    res.send(generateSE(serious, mean));
+    generateSE(serious, mean).then(line => res.send(line));
 });
 
 app.get('/se/count', (req, res) => res.send(wordsSE()));

@@ -1,5 +1,5 @@
 import word from './wordProcessor.js';
-import * as types from '../words/en/types.js';
+import * as types from '../words/types.js';
 
 import { upperCaseFirst } from '../util/stringUtils';
 
