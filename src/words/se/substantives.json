@@ -1,6 +1,7 @@
 {
     "serious": [
-        "<ett>skratt"
+        "<ett>skratt",
+        "<ett>leende"
     ],
     "mean": [
         "<en>sopa"
@@ -9,3 +10,4 @@
         "<en>hund"
     ]
 }
+

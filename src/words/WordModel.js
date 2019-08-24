@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 const wordSchema = new mongoose.Schema({
     value: {
         type: String,
-        unique: true,
         required: true
     },
     type: {
@@ -15,6 +14,9 @@ const wordSchema = new mongoose.Schema({
     },
     serious: {
         type: Boolean
+    },
+    language: {
+        type: String
     }
 });
 

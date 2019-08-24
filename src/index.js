@@ -2,7 +2,7 @@ import express from 'express';
 import generateEN from './model_en';
 import generateSE from './model_se';
 import * as allWordsSE from './words/se';
-import { connectDb } from './words';
+import { connectDb, seedIfEmpty } from './words';
 import { config } from 'dotenv';
 
 config();
@@ -41,4 +41,6 @@ app.get('/meta/', (req, res) => {
    }));
 });
 
-connectDb().then(() => app.listen(port, () => console.log(`Autoflirt API listening at ${port}`)));
+connectDb()
+    .then(() => seedIfEmpty())
+    .then(() => app.listen(port, () => console.log(`Autoflirt API listening at ${port}`)));

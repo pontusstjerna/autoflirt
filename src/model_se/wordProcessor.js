@@ -1,8 +1,8 @@
-import { getWord } from '../words';
+import { getWordSE } from '../words';
 
 export default (type, isSerious, isMean, tOrN) =>
-    getWord({ type, serious: isSerious, mean: isMean })
-        .then(word => formatTorN(word.value ? word.value : ''), tOrN);
+    getWordSE({ type, serious: isSerious, mean: isMean })
+        .then(word => formatTorN(!word ? '<insert word here>' : word.value ? word.value : '', tOrN));
 
 export const formatTorN = (string, tOrN) => {
     string = string.replace(/%tn%/g, tOrN);
