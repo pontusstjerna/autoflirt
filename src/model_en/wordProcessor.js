@@ -1,7 +1,5 @@
-import * as words from '../words';
+import * as words from '../words/en/index';
 
-import { getRandomInt, getRandomBoolean } from '../util';
+import { getRandomInt } from '../util';
 
-export default (type, isSerious) => {
-    return words[type][getRandomInt(words[type].length - 1)];
-}
+export default (type, isSerious) => words[type][getRandomInt(words[type].length - 1)]

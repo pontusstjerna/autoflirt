@@ -1,5 +1,5 @@
-import word, { setup } from './wordProcessor.js';
-import * as types from '../words/types.js';
+import word from './wordProcessor.js';
+import * as types from '../words/en/types.js';
 
 import { upperCaseFirst } from '../util/stringUtils';
 
@@ -28,6 +28,7 @@ export default () => {
 }
 
 const genGreeting = () => {
+
     let greeting = word(types.GREETINGS);
 
     // Add description
@@ -38,7 +39,7 @@ const genGreeting = () => {
             greeting += ' ' + word(types.ADJECTIVES);
         }
 
-        greeting += ' ' + word(types.SUBSTANTIVES);    
+        greeting += ' ' + word(types.SUBSTANTIVES);
     }
 
     return greeting;

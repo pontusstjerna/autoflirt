@@ -26,7 +26,7 @@ app.get('/se/count', (req, res) => res.send(wordsSE()));
 
 app.get('/en/', (req, res) => {
    requestsEN++;
-   res.send("Not supported yet.");
+   res.send(generateEN());
 });
 
 app.get('/meta/', (req, res) => {
