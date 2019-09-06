@@ -19,6 +19,8 @@ const port = 3001;
 let requestsSE = 0;
 let requestsEN = 0;
 
+app.use(express.urlencoded());
+
 app.get('/se/', (req, res) => {
     requestsSE++;
     let serious = req.query.serious !== "false";
@@ -37,8 +39,29 @@ app.get('/meta/', (req, res) => {
    res.send(JSON.stringify({
        requestsEN,
        requestsSE,
-       requests: requestsEN + requestsSE
+       requests: requestsEN + requestsSE,
    }));
+});
+
+app.post('/slack/se', (req, res) => {
+    requestsSE++;
+    if (!req.body.text) {
+        res.send(400);
+    }
+    let serious = req.body.text.includes('seriös');
+    let mean = req.body.text.includes('elak');
+    generateSE(serious, mean).then(line => res.send(JSON.stringify({
+        "response_type": "in_channel",
+        "text": line
+    })));
+});
+
+app.post('/slack/en', (req, res) => {
+    requestsEN++;
+    res.send(JSON.stringify({
+        "response_type": "in_channel",
+        "text": generateEN()
+    }));
 });
 
 connectDb()
