@@ -45,11 +45,10 @@ app.get('/meta/', (req, res) => {
 
 app.post('/slack/se', (req, res) => {
     requestsSE++;
-    if (!req.body.text) {
-        res.send(400);
-    }
-    let serious = req.body.text.includes('seriös');
-    let mean = req.body.text.includes('elak');
+    
+
+    let serious = !req.body.text ? true : req.body.text.includes('seriös');
+    let mean = !req.body.text ? false : req.body.text.includes('elak');
     generateSE(serious, mean).then(line => res.send(JSON.stringify({
         "response_type": "in_channel",
         "text": line
