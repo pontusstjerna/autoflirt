@@ -47,7 +47,7 @@ app.post('/slack/se', (req, res) => {
     requestsSE++;
     
 
-    let serious = !req.body.text ? true : req.body.text.includes('seriös');
+    let serious = !req.body.text ? true : !req.body.text.includes('oseriös');
     let mean = !req.body.text ? false : req.body.text.includes('elak');
     res.set('Content-Type', 'application/json');
     generateSE(serious, mean).then(line => res.send(JSON.stringify({
