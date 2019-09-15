@@ -1,3 +1,5 @@
+require('babel-polyfill');
+
 import express from 'express';
 import generateEN from './model_en';
 import generateSE from './model_se';
