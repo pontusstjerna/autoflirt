@@ -1,3 +1,5 @@
+require("babel-polyfill");
+
 import express from 'express';
 import generateEN from './model_en';
 import generateSE from './model_se';
@@ -28,7 +30,7 @@ app.get('/se/', (req, res) => {
     generateSE(serious, mean).then(line => res.send(line));
 });
 
-app.get('/se/count', (req, res) => res.send(wordsSE()));
+app.get('/se/count', (req, res) => res.status(200).send(wordsSE()));
 
 app.get('/en/', (req, res) => {
    requestsEN++;
