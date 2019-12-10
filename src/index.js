@@ -27,7 +27,7 @@ app.get('/se/', (req, res) => {
     requestsSE++;
     let serious = req.query.serious !== "false";
     let mean = req.query.mean === "true";
-    generateSE(serious, mean).then(line => res.send(line));
+    generateSE(serious, mean, true).then(line => res.send(line));
 });
 
 app.get('/se/count', (req, res) => res.status(200).send(wordsSE()));
