@@ -82,7 +82,7 @@ const createStatementPart = options => {
 };
 
 const createPlacePart = ({ preposition, place, iWorkAtPartLocation }) =>
-    iWorkAtPartLocation === 'statement' ? '' : ` ${preposition} ${place}?`;
+    iWorkAtPartLocation === 'statement' ? '' : ` ${preposition} ${place}`;
 
 const createFirstPart = options => {
     const { greeting, compliment, commaDotOrExclamationMark, iWorkAtPartLocation } = options;

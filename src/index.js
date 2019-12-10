@@ -27,7 +27,8 @@ app.get('/se/', (req, res) => {
     requestsSE++;
     let serious = req.query.serious !== "false";
     let mean = req.query.mean === "true";
-    generateSE(serious, mean, true).then(line => res.send(line));
+    const business = req.query.business === "true";
+    generateSE(serious, mean, business).then(line => res.send(line));
 });
 
 app.get('/se/count', (req, res) => res.status(200).send(wordsSE()));
@@ -51,8 +52,9 @@ app.post('/slack/se', (req, res) => {
 
     let serious = !req.body.text ? true : !req.body.text.includes('oseriös');
     let mean = !req.body.text ? false : req.body.text.includes('elak');
+    let business = !req.body.text ? false : req.body.text.includes('företag');
     res.set('Content-Type', 'application/json');
-    generateSE(serious, mean).then(line => res.send(JSON.stringify({
+    generateSE(serious, mean, business).then(line => res.send(JSON.stringify({
         "response_type": "in_channel",
         "text": line
     })));
