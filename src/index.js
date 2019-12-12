@@ -31,7 +31,7 @@ app.get('/se/', (req, res) => {
     generateSE(serious, mean, business).then(line => res.send(line));
 });
 
-app.get('/se/count', (req, res) => res.status(200).send(wordsSE()));
+app.get('/se/count', (req, res) => res.status(200).send("" + wordsSE()));
 
 app.get('/en/', (req, res) => {
    requestsEN++;
